@@ -1,19 +1,19 @@
 #include <stdio.h>
-int est_pair(int j){
-    int n;
-   
-    if(n % 2 == 0) j = 0;
+int est_pair(int n){
     
-    else j = 1;
-    return j ;
+    return n % 2 == 0 ;
  
 }
 int main()
 {
     int n ;
-    printf("enter a num");
+    printf("enter a num :");
+
     scanf("%d" , &n);
+
     int c = est_pair(n);
-    if(c == 1) printf("la nombre est pair");
-    else printf("la nombre est impair");
+
+    if(est_pair(n)) printf("pair");
+
+    else  printf("impair");
 }
