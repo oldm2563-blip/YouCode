@@ -1,16 +1,19 @@
 #include <stdio.h>
+int check(int a ,int b){
+
+return a*b;
+
+}
+
 int main(){
-int a;
-int b;
-int result=0;
-printf("first number : ");
-scanf("%d",&a);
+    int c , d;
+    printf("first number : ");
+scanf("%d",&c);
 
 printf("second number : ");
-scanf("%d",&b);
+scanf("%d",&d);
 
-result=a*b;
+int result = check(c, d);
 
-printf("the result is : %d",result);
-return 0;
+printf("result is %d" , result);
 }

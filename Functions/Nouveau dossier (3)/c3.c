@@ -1,19 +1,25 @@
 #include <stdio.h>
-int main(){
-int a;
-int b;
-int max;
+int maximum(int a ,int b){
+int big;
+if(a < b){
+    big = b;
+}
+else if(a>b)
+big = a;
+return big;
+}
 
-printf("first number : ");
-scanf("%d",&a);
+
+int main()
+{
+    int c , d ;
+    printf("first number : ");
+scanf("%d",&c);
 
 printf("second number : ");
-scanf("%d",&b);
+scanf("%d",&d);
 
-if(a<b)
-printf("%d is the biggest",b);
-else
-printf("%d is the biggest",a);
-
-
+int l = maximum(c , d);
+printf("the biggest number is %d" , l);
+return 0;
 }

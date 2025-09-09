@@ -1,19 +1,17 @@
 #include <stdio.h>
-int main() {
-    int n;
-    int first = 0, second = 1, next;
+long long fib(int n) {
+    
+    if (n == 0) return 0;
+    if (n == 1) return 1;
 
-    printf("enter a num: ");
-    scanf("%d", &n);
-    if (n >= 1) 
-    printf("%d, ", first);
-    if (n >= 2) 
-    printf("%d, ", second);
-    for (int i = 3; i <= n; i++) {
-        next = first + second;
-        printf("%d, ", next);
-        first = second;
-        second = next;
-    }
-    return 0;
+    return fib(n-1) + fib(n-2);
+}
+
+int main(){
+    int i;
+     printf("enter a num: ");
+    scanf("%d", &i);
+    long long result = fib(i);
+    printf("%d" , result);
+  return 0;
 }

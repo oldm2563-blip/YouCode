@@ -1,19 +1,25 @@
 #include <stdio.h>
-int main(){
-int a;
-int b;
+int minimum(int a ,int b){
+int big;
+if(a < b){
+    big = a;
+}
+else if(a>b)
+big = b;
+return big;
+}
 
 
-printf("first number : ");
-scanf("%d",&a);
+int main()
+{
+    int c , d ;
+    printf("first number : ");
+scanf("%d",&c);
 
 printf("second number : ");
-scanf("%d",&b);
+scanf("%d",&d);
 
-if(a>b)
-printf(" %d is smaller than %d",b , a);
-else
-printf(" %d is smaller than %d",a , b);
-
-
+int l = minimum(c , d);
+printf("the smallest number is %d" , l);
+return 0;
 }

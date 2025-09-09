@@ -1,13 +1,20 @@
 #include <stdio.h>
-int main(){
-int n;
+long long factorielle(int n){
 int result=1;
-printf("first number : ");
-scanf("%d",&n);
+
+
 for(int i= 1; i<=n;i++)
 {
     result*=i;
 }
-printf("result is : %d",result);
-return 0;
+
+return result;
+}
+int main(){
+    int i;
+printf(" number : ");
+scanf("%d",&i);
+long long l = factorielle(i);
+printf("result is : %d", l);
+
 }
