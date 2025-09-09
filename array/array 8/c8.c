@@ -31,6 +31,7 @@ int main()
     }
     else{
         printf("only 1 or 0");
+        return 0 ;
     }
 for(int i = 0 ; i < n ; i++){
     printf("%d\n" , orr[i]);
