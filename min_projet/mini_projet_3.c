@@ -8,7 +8,7 @@ int main()
     do{
         int n = 0;
             char str[100];
-            char *happy  = ("good","happy");
+            char *happy  = {"good","happy"};
             char *sad = "sad" ;
             char *help ="help";
             char *bye = "exit";
