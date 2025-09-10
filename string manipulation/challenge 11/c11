@@ -1,0 +1,39 @@
+#include <stdio.h>
+
+//Put your find_replace() function here
+
+int main() {
+
+// Case 1: The replacement lengthens the string
+
+char sentence1 [256] = "I see a cat on the cat's rug.";
+
+printf("Original: %s\n", sentence1);
+
+find_replace(sentence1, "cat", "big lion");
+
+printf("Modifies: %s\n\n", sentence1);
+
+// Case 2: The replacement shortens the string
+
+char sentence2 [256] = "The programmer programs programs.";
+
+printf("Original: %s\n", sentence2);
+
+find_replace(sentence2, "program", "code");
+
+printf("Modifies: %s\n\n", sentence2);
+
+// Case 3: The target is not found
+
+char sentence3 [256] = "This is a simple test.";
+
+printf("Original: %s\n", sentence3);
+
+search_replace(sentence3, "difficult", "easy");
+
+printf("Modified: %s\n\n", sentence3);
+
+return 0;
+
+}

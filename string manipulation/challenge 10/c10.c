@@ -8,8 +8,8 @@ int main()
     fgets(sdn , sizeof(sdn) , stdin);
     char *resultat = strstr(str , sdn);
     if(resultat != NULL)
-    printf("gggg");
+    printf("found");
     else
-    printf("nnng");
+    printf("not found");
 
 }
