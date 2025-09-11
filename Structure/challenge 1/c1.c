@@ -10,18 +10,14 @@ struct personne
 int main ()
 {
     struct personne s1;
-    char first_name[50];
-    char last_name[50];
-    int age2;
+
     printf("enter first name :");
-    scanf("%s" , &first_name);
-    strcpy(s1.firstname , first_name);
+    scanf("%s" , &s1.firstname);
     printf("enter last name :");
-    scanf("%s" , &last_name);
-    strcpy(s1.lastname , last_name);
+    scanf("%s" , &s1.lastname);
     printf("your age plz :");
-    scanf("%d" , &age2);
-    s1.age = age2;
+    scanf("%d" , &s1.age);
+
     printf("first name is %s\n" ,s1.firstname );
     printf("last name is : %s\n" , s1.lastname);
     printf("and your : %d years old\n" , s1.age);

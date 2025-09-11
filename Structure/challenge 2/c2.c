@@ -13,25 +13,21 @@ int main()
     char last_name[50];
     int grade[5];
     printf("enter first name :");
-    scanf("%s" , &first_name);
+    scanf("%s" , &s1.firsname);
     printf("last name :");
-    scanf("%s" , &last_name);
+    scanf("%s" , &s1.lastname);
     printf("enter your grades:");
-    for(int i =0 ; i <= 5 ; i++)
+    for(int i =0 ; i < 5 ; i++)
     {
-        scanf("%d" , &grade[i]);
+        scanf("%d" , &s1.grades[i]);
     }
-    strcpy(s1.firsname , first_name);
-    strcpy(s1.lastname , last_name);
-    for(int i = 0 ; i <= 5 ;i++)
-    {
-        s1.grades[i] = grade[i];
-    }
+   
+  
     printf("first name is : %s\n" , s1.firsname);
     printf("last name is : %s\n" , s1.lastname);
     printf("your grades are\n");
-    for(int i = 0 ; i <= 5 ; i++)
+    for(int i = 0 ; i < 5 ; i++)
     {
-        printf("%d" , s1.grades[i]);
+        printf("%d\n" , s1.grades[i]);
     }
 }
