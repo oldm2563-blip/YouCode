@@ -2,14 +2,16 @@
 #include <string.h>
 int main()
 {
-    char str[100];
+    char str[3][100] = {"duck","coke","youcode"};
     char sdn[100];
-    fgets(str , sizeof(str) , stdin);
     fgets(sdn , sizeof(sdn) , stdin);
-    char *resultat = strstr(str , sdn);
-    if(resultat != NULL)
-    printf("found");
-    else
+    sdn[strcspn(sdn, "\n")] = '\0';
+    for(int i = 0 ; i < 3 ; i++){
+     char *resultat = strstr(str[i] , sdn );
+     if(resultat != NULL){
+     printf("found");
+     return 0;
+     }
+    }
     printf("not found");
-
 }
