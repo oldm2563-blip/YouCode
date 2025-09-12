@@ -32,14 +32,17 @@ void grades() {
             s1[n].GPA += s1[n].grades[f];
         }
         s1[n].GPA /= 10.0; 
-
-        printf("\nStudent name: %s %s, Age: %d, ID: %d, GPA: %.2f\n",s1[n].firstname, s1[n].lastname, s1[n].age, s1[n].ID, s1[n].GPA);
+        
+        
 
         printf("Do you want to continue? (1 = yes, 0 = no): ");
         scanf("%d", &choice);
         n++;
     }
-
+    for(int i = 0 ; i < n ;i++)
+    {
+        printf("\nStudent name: %s %s, Age: %d, ID: %d, GPA: %.2f\n",s1[i].firstname, s1[i].lastname, s1[i].age, s1[i].ID, s1[i].GPA);
+    }
     printf("\nAvailable courses:\n");
     printf("CS101 - Introduction to Computer Science (Credits: 3, Grade: A)\n");
     printf("MATH203 - Differential Equations (Credits: 4, Grade: B+)\n");
