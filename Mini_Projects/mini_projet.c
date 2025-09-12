@@ -1,58 +1,51 @@
 #include <stdio.h>
 #include <string.h>
-#include <string.h>
 #define Max 100
-struct student
-{
-    char firstname[Max][100];
-    char lastname[Max][100];
-    int age[Max];
-    int ID[Max];
+
+struct student {
+    char firstname[100];
+    char lastname[100];
+    int age;
+    int ID;
     int grades[10];
-    float GPA[Max];
+    float GPA;
 };
-void gardes(){
-    int choice;
-    int n=0;
-    struct student s1[n];
-    for(int i = 0 ; i < 10 ; i++){
-    printf("enter your first name");
-    scanf("%s" , &s1->firstname[i]);
-    printf("enter your last name");
-    
-    scanf("%d" , &s1->age[i]);
-    printf("enter your ID");
-    scanf("%d" , &s1->ID[i]);
-    for(int f = 0 ; f <10 ; f++){
-    printf("enter your Grades");
-    scanf("%d" , &s1->grades[f]);
-    s1->GPA[i] += s1->grades[f]/4;
+
+void grades() {
+    struct student s1[Max];
+    int n = 0;
+    int choice = 1;
+
+    while (choice == 1 && n < Max) {
+        printf("Enter your first name: ");
+        scanf("%s", s1[n].firstname);
+        printf("Enter your last name: ");
+        scanf("%s", s1[n].lastname);
+        printf("Enter your age: ");
+        scanf("%d", &s1[n].age);
+        printf("Enter your ID: ");
+        scanf("%d", &s1[n].ID);
+        s1[n].GPA = 0;
+        for (int f = 0; f < 10; f++) {
+            printf("Enter grade %d: ", f + 1);
+            scanf("%d", &s1[n].grades[f]);
+            s1[n].GPA += s1[n].grades[f];
+        }
+        s1[n].GPA /= 10.0; 
+
+        printf("\nStudent name: %s %s, Age: %d, ID: %d, GPA: %.2f\n",s1[n].firstname, s1[n].lastname, s1[n].age, s1[n].ID, s1[n].GPA);
+
+        printf("Do you want to continue? (1 = yes, 0 = no): ");
+        scanf("%d", &choice);
+        n++;
     }
 
-    printf("student name is %s %s , hes %d ID number is %d and with a gpa score of %.f" , s1->firstname ,s1->lastname ,s1->age ,s1->ID ,s1->GPA);
-        printf("do you want to continue :");
-    printf("0 , no ");
-    printf("1 . yes0");
-    scanf("%d" , choice);
-    if(choice == 1) n++;
-    else if(choice == 0){
-        break;
-    }
-
-    else{
-    printf("wrong input :");
-        break;
-    }
-    }
-    printf("avaible courses are CS101, Course Name: Introduction to Computer Science, Credits: 3, Grade: A\n");
-    printf(" MATH203, Course Name: Differential Equations, Credits: 4, Grade: B+\n");
-
-
-
+    printf("\nAvailable courses:\n");
+    printf("CS101 - Introduction to Computer Science (Credits: 3, Grade: A)\n");
+    printf("MATH203 - Differential Equations (Credits: 4, Grade: B+)\n");
 }
-int main()
-{
-    gardes();
+
+int main() {
+    grades();
     return 0;
 }
-
