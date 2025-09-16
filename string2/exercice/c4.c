@@ -3,6 +3,7 @@
 void count()
 {
     char *check;
+    int i;
     int count = 0 ;
     char word[100] = "The black cat sleeps, the dog plays, the black cat";
     char *wword = strtok(word, " " );
@@ -15,9 +16,9 @@ void count()
         wword = strtok(NULL , " ");
         count++;
      }
-     for(int i = 0 ; i < count ; i++)
+     for(i = 0 ; i < count ; i++)
      {
-        printf("%s" , check)
+        printf("%s",check);
      }
      
 }

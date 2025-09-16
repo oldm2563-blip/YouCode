@@ -1,12 +1,14 @@
 #include <stdio.h>
 #include <string.h>
+#include <ctype.h>
 void removil()
 {
+	int i;
     int n = 0;
     char word [100] = "the cat sleeps ?., the dog plays!";
-    for(int i = 0 ; word[i] !='\0'  ; i++ )
+    for(i = 0 ; word[i] !='\0'  ; i++ )
     {
-        if(word[i] != '!' && word[i] != '?' && word[i] != '.' && word[i] != ',' && word[i] != ';' && word[i] != ':')
+        if(!ispunct(word[i]))
         {
             word[n++] = word[i];
         }
